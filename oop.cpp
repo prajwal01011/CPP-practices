@@ -18,15 +18,27 @@ class teacher{
     private:
     double salary;
     public:
-    //constructor
-    teacher(){
-        cout<<"hi i am constructor"<<endl;
-    }
-    //properties|attributes
+     //properties|attributes
     string name;
     string dept;
     
     string subject;
+
+
+    //non parameterized constructor
+    teacher(){
+            dept="computer science";
+        }
+    //parameterized constructor
+    teacher(string name,string dept,string subject,double salary){
+       this-> name=name;
+       this-> dept=dept;
+       this-> subject=subject;
+       this-> salary=salary;
+    }
+
+
+   
 
     //methods|member functions
     void changeDept(string newDept){
@@ -42,19 +54,20 @@ class teacher{
     double getSalary(){
         return salary;
     }
+    void getinfo(){
+        cout<<"Name :"<<name<<endl;
+        cout<<"Subject :"<<subject<<endl;
+    }
 
 };
 
 
 int main(){
-    teacher t1;// teacher obj & constructor call
-    t1.name="prajwal";
-    t1.dept="c++";
-    t1.subject="computer science";
-    t1.setSalary(100000);
+    teacher t1("prajwal","computer science","c++", 100000);// teacher obj & constructor call
+    t1.getinfo();
+   
 
-    cout<<t1.name<<endl;
-    cout<<t1.getSalary()<<endl;
+    
 
 
 
