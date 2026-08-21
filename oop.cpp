@@ -36,6 +36,10 @@ class teacher{
        this-> subject=subject;
        this-> salary=salary;
     }
+    teacher(teacher &obj)//copy constructor & pass by reference
+    {
+
+    }
 
 
    
@@ -65,6 +69,8 @@ class teacher{
 int main(){
     teacher t1("prajwal","computer science","c++", 100000);// teacher obj & constructor call
     t1.getinfo();
+    teacher t2(t1);
+    t2.getinfo();
    
 
     
