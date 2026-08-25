@@ -36,8 +36,13 @@ class teacher{
        this-> subject=subject;
        this-> salary=salary;
     }
-    teacher(teacher &obj)//copy constructor & pass by reference
+    teacher(teacher &originalObj)//copy constructor & pass by reference
     {
+        cout<<"i am custom copy constructor..\n";
+        this->name =originalObj.name;
+        this->dept = originalObj.dept;
+        this->subject = originalObj.subject;
+        this->salary=originalObj.salary;
 
     }
 
@@ -68,8 +73,8 @@ class teacher{
 
 int main(){
     teacher t1("prajwal","computer science","c++", 100000);// teacher obj & constructor call
-    t1.getinfo();
-    teacher t2(t1);
+    //t1.getinfo();
+    teacher t2(t1);//custom copy constructor
     t2.getinfo();
    
 
