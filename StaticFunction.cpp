@@ -15,7 +15,7 @@ class A{
         }
         
 };
-int A::a=0;
+int A::a=0;//int A::a = 0; defines and initializes the static variable a that belongs to class A and also varaible name should match with class.*** -According to chat gpt 
 
 
 int main(){
