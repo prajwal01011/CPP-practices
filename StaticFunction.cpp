@@ -8,7 +8,7 @@ void fun(){
 }
 class A{
     public:
-        static int a;
+        static int a;//static varaible on class
         void funa(){
             cout<<"a :"<<a<<endl;
             a=a+1;
@@ -16,7 +16,11 @@ class A{
         
 };
 int A::a=0;//int A::a = 0; defines and initializes the static variable a that belongs to class A and also varaible name should match with class.*** -According to chat gpt 
-
+class ABC{
+public:
+ABC(){cout<<"constructor\n";}
+~ABC(){cout<<"distructor\n";}
+};
 
 int main(){
     A a1,a2;
@@ -26,5 +30,8 @@ int main(){
     a2.funa();//3 due to stored value of "a" statically on class not obj
     fun();//0 due to static function
     fun();//1 due to static function
+    static ABC obj;//static obj
+
+    cout<<"end of program\n";
     return 0;
 }
